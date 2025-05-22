@@ -1,7 +1,18 @@
 import React from "react";
 import "./CouponsPercentage.css";
 
-function CouponsPercentage({ setCoupons , coupon}) {
+type Coupon = {
+  name: string;
+  code: string;
+};
+
+type Props = {
+  setCoupons: (value: number) => void;
+  coupon: Coupon;
+};
+
+
+function CouponsPercentage({ setCoupons, coupon }: Props) {
   return (
     <div className="CouponsPercentage">
       <h1>Coupons Percentage</h1>
