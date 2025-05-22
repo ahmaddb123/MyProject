@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import "./TableSettings.css";
 import { IoPersonCircleOutline } from "react-icons/io5";
