@@ -1,0 +1,79 @@
+.Retarget {
+    background-color: #2A2B2D;
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.Retarget h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
+.Retarget .Retarget-container .box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.Retarget .Retarget-container .box h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0px;
+    width: 100%;
+    display: flex;
+}
+.Retarget .Retarget-container .box h2 button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 10px;
+    background-color: #393a3c;
+    color: #FFFFFF80;
+    border-radius: 10px;
+    margin: 0 10px;
+    border: 1px solid #FFFFFF80;
+}
+.Retarget .Retarget-container .box p {
+    width: 80%;
+    color: #FFFFFFB2;
+}
+.Retarget .Retarget-container .box .btn-excel button {
+    padding: 10px;
+    border-radius: 10px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #33C48133;
+    display: flex;
+    color: #FFFFFFB2;
+}
+@media (max-width : 700px) {
+    .Retarget .Retarget-container .box h2 {
+        justify-content: space-between;
+        font-size: 14px;
+        align-items: center;
+    }
+    .Retarget .Retarget-container .box h2 button {
+        font-size: 8px;
+    }
+    .Retarget .Retarget-container .box .btn-excel {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .Retarget .Retarget-container .box .btn-excel button {
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    .Retarget .Retarget-container .box p {
+        font-size: 12px;
+    }
+    .Retarget .Retarget-container .box  {
+        flex-direction: column;
+    }
+}

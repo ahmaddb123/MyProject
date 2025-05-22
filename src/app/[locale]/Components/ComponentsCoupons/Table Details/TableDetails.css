@@ -1,0 +1,22 @@
+.TableDetails .btns {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: #2a2b2d;
+  padding: 20px;
+}
+.TableDetails .btns button {
+  padding: 5px 10px;
+  background-color: #707070;
+  color: white;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.TableDetails .btns button:hover {
+  background-color: #464545;
+}
+.TableDetails .btns button.active {
+    background-color: #464545;
+}

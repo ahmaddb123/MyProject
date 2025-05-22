@@ -1,0 +1,89 @@
+.bar {
+  height: 100vh;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  background-color: #2e2e30;
+  color: white;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  transition: 0.5s;
+  z-index: 1000;
+}
+.bar::-webkit-scrollbar {
+  display: none; /* يخفي السكرول في Chrome و Safari */
+}
+.bar h1 {
+  font-size: 40px;
+}
+.bar ul {
+  width: 100%;
+}
+.reefi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid white;
+}
+.reefi div {
+  display: flex;
+  align-items: center;
+}
+.bar ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 7px;
+  padding: 10px;
+  transition: 0.5s;
+}
+.bar ul li:hover {
+  background-color: white;
+  color: black;
+}
+.bar ul li img {
+  margin-right: 10px;
+}
+.bar ul li svg {
+  margin-right: 10px;
+  font-size: 25px;
+}
+.bar button {
+  background-color: #969aa0;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 7px;
+  padding: 10px;
+  transition: 0.5s;
+}
+.bar button svg {
+  margin-right: 10px;
+  font-size: 25px;
+}
+.bar button:hover {
+  background-color: #535353;
+}
+
+@media (max-width: 992px) {
+  .bar {
+    position: fixed;
+    left: -500px;
+    top: 0;
+  }
+  .bar.active {
+    left: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bar {
+    width: 70%;
+  }
+}

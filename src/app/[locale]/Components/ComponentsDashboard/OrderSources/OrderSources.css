@@ -1,0 +1,40 @@
+.OrderSources {
+  width: 48%;
+  background-color: #2a2b2d;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+.OrderSources .box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+}
+.OrderSources .box p {
+  /* width: ; */
+}
+.OrderSources button {
+  margin: 10px;
+}
+.btn {
+  background-color: #3b3c3e;
+  padding: 5px;
+  border-radius: 5px;
+}
+.OrderSources .box .p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.OrderSources .box .p svg{
+    margin-right: 5px;
+}
+@media (max-width : 800px) {
+    .OrderSources {
+        width: 100%;
+    }
+}

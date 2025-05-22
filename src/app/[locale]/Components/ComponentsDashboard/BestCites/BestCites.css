@@ -1,0 +1,39 @@
+.BestCites {
+    width: 50%;
+    background-color: #2a2b2d;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+  
+  }
+  .BestCites .box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+  }
+  .BestCites button {
+    margin: 10px;
+  }
+  .btn {
+    background-color: #3b3c3e;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .BestCites .box .p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .BestCites .box .p svg{
+      margin-right: 5px;
+  }
+  @media (max-width : 800px) {
+      .BestCites {
+          width: 100%;
+          margin-top: 20px;
+      }
+  }
+  

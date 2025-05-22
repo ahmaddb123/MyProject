@@ -1,0 +1,5 @@
+.TableCountries {
+    width: 100%;
+    overflow-y: auto;
+    margin: 20px 0;
+}

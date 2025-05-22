@@ -1,0 +1,78 @@
+.CouponsPercentage {
+  background-color: #2a2b2d;
+  padding: 30px;
+  border-radius: 10px;
+}
+.CouponsPercentage h1 {
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+}
+.CouponsPercentage form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+ form .ci {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+ form .ci .container-input div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+ form .ci .container-input div label {
+    margin: 10px 0;
+    font-size: 20px;
+}
+ form .ci .container-input div input {
+    padding: 10px;
+    outline: none;
+    border: 1px solid #707070;
+    color: #707070;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 100%;
+}
+.container-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.container-btn button:first-child{
+    background: white;
+    color: black;
+    padding: 10px 30px;
+    width: 30%;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.container-btn button:last-child{
+    background: transparent;
+    color: #EA5455;
+    border: 1px solid #EA5455;
+    padding: 10px 30px;
+    width: 30%;
+    font-size: 20px;
+    border-radius: 10px;
+}
+@media (max-width : 650px) {
+    .CouponsPercentage form .ci {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .container-btn {
+        flex-direction: column;
+      }
+      .container-btn button:last-child ,
+      .container-btn button:first-child {
+        margin: 10px 0;
+        width: 100%;
+      }
+}

@@ -1,0 +1,19 @@
+.Section1 {
+    background-color: #444444;
+    padding: 20px;
+    border-radius: 10px;
+}
+.box-section1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+@media (max-width : 800px) {
+    .box-section1 {
+        justify-content: center;
+    }
+    .Section1{
+        padding: 20px 0;
+    }
+}

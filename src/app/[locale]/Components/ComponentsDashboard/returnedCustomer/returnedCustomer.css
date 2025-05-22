@@ -1,0 +1,31 @@
+.ReturnedCustomer {
+    border-radius: 20px;
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.ReturnedCustomer h1 {
+    margin: 20px;
+    font-size: 20px;
+}
+.ReturnedCustomer p {
+    margin: 20px;
+}
+.ReturnedCustomer button {
+    background-color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: black;
+    width: 90%;
+    margin: 20px;
+}
+@media (max-width : 800px) {
+    .ReturnedCustomer {
+        width: 100%;
+        margin-top: 20px;
+    }
+}

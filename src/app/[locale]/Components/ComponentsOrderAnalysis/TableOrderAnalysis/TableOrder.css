@@ -1,0 +1,125 @@
+.table-container {
+  padding: 20px;
+  background-color: #121212;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.table-scroll {
+  width: 120%;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-family: sans-serif;
+  table-layout: fixed;  
+}
+
+.order-table thead .theadTh th {
+  background-color: #1e1e1e;
+  padding: 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.order-table td {
+  font-size: 13px;
+  padding: 5px;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+.main-row {
+  cursor: pointer;
+}
+
+.status-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.status.completed {
+  background-color: #00b894;
+}
+
+.status.pending {
+  background-color: #f9ca24;
+  color: #000;
+}
+
+.status.cancelled {
+  background-color: #eb4d4b;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 16px;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.accordion-wrapper {
+  padding: 0;
+  background-color: #151515;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.accordion-content.open {
+  max-height: 1000px;
+}
+
+.inner-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;  
+}
+.inner-table th {
+  background-color: #1e1e1e;
+  padding: 5px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.inner-table td {
+  padding: 5px;
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.discount {
+  color: #e84118;
+}
+
+.summary-values {
+  padding: 10px;
+  width: 100%;
+}
+
+.summary-values div {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  width: 100%;
+}
+
+.total {
+  font-weight: bold;
+  color: #00b894;
+}

@@ -1,0 +1,14 @@
+.TableDataBank {
+    width: 100%;
+    overflow-y: auto;
+    margin: 20px 0;
+}
+.TableDataBank .table-wrapper tbody tr td {
+    text-align: center;
+}
+.TableDataBank .table-wrapper tbody tr td{
+    padding: 20px;
+}
+.TableDataBank .table-wrapper tbody tr {
+    border-bottom: 1px solid #707070;
+}

@@ -1,0 +1,47 @@
+.boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.BoxDashboard {
+    width: 262px;
+    height: 161px;
+    margin: 15px;
+    background-color: #2A2B2D;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+.BoxDashboard .container-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.BoxDashboard .container-box h1 {
+    color: #afafb0;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.icon div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+}
+.icon div svg{
+font-size: 30px;
+}
+.BoxDashboard .desc {
+    width: 100%;
+    text-align: left;
+    color: #595959;
+
+}

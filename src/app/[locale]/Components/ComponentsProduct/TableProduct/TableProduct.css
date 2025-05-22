@@ -1,0 +1,35 @@
+.TableProduct {
+  width: 100%;
+  text-align: right;
+  margin: 20px 0;
+  overflow-y: auto;
+}
+.btnDetails {
+  background-color: #2a2b2d;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 30px;
+}
+.TableProduct table {
+  width: 100%;
+}
+.table-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.TableProduct table tr th {
+  text-align: center;
+  padding: 10px;
+}
+.TableProduct table tr td {
+  padding: 20px;
+}
+
+@media (max-width : 700px) {
+  .TableProduct table {
+    width: 700px;
+  }
+  .table-wrapper {
+    overflow: auto;
+  }
+}

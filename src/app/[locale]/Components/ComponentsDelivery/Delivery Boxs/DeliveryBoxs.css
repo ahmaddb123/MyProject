@@ -1,0 +1,48 @@
+.Delivery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.BoxDelivery {
+    width: 262px;
+    height: 161px;
+    margin: 10px;
+    background-color: #2A2B2D;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+.BoxDelivery .container-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px
+}
+.BoxDelivery .container-box h1 {
+    color: white;
+    font-size: 30px;
+    margin: 15px 0;
+}
+.icon div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+}
+.icon div svg{
+font-size: 30px;
+}
+
+.BoxDelivery button {
+    width: 100%;
+    text-align: center;
+    background-color: #564B3033;
+}

@@ -1,0 +1,42 @@
+.TableCoupons {
+  margin: 30px 0;
+  overflow-y: auto;
+}
+.table-wrapper {
+  width: 100%;
+}
+.table-wrapper table {
+  width: 100%;
+}
+.table-wrapper table th ,
+.table-wrapper table td {
+  padding: 10px;
+  text-align: center;
+}
+.tdBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.devBtn {
+  background-color: #707070;
+  border-radius: 10px;
+}
+.devBtn button:first-child {
+  border-right: 1px solid gray;
+}
+.devBtn button:last-child {
+  border-left: 1px solid gray;
+}
+.devBtn button:last-child svg {
+    color: black;
+    font-weight: bold;
+}
+.devBtn button {
+  padding: 10px;
+}
+@media (max-width : 800px) {
+  .table-wrapper {
+    width: 713px;
+  }
+}

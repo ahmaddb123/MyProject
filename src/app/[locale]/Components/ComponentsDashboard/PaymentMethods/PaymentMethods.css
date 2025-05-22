@@ -1,0 +1,41 @@
+.PaymentMethods {
+    width: 48%;
+    background-color: #2a2b2d;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .PaymentMethods .box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+  }
+  .PaymentMethods button {
+    margin: 10px;
+  }
+  .btn {
+    background-color: #3b3c3e;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .PaymentMethods .box .p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .PaymentMethods .box .p svg{
+      margin-right: 5px;
+  }
+  @media (max-width : 800px) {
+      .PaymentMethods {
+          width: 100%;
+          margin-top: 20px;
+      }
+  }
+  

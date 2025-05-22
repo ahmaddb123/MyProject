@@ -1,0 +1,41 @@
+.BarChartProducts {
+    width: 100%;
+    height: 400px;
+    background-color: #2a2b2d;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .BarChartProducts .BarProducts {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .BarChartProducts .box {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+  }
+  .BarChartProducts button {
+    margin: 10px;
+  }
+  .btn {
+    background-color: #3b3c3e;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .BarChartProducts .box .p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .BarChartProducts .box .p svg{
+      margin-right: 5px;
+  }
+  @media (max-width : 800px) {
+      .BarChartProducts {
+          width: 100%;
+          margin-top: 20px;
+      }
+  }
+  

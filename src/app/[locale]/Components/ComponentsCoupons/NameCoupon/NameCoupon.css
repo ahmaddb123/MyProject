@@ -1,0 +1,90 @@
+.NameCoupon1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.NameCoupon1 .btns {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.NameCoupon1 .btns button{
+  width: 100px;
+    padding: 10px;
+    background-color: #707070;
+    border-radius: 10px;
+    margin: 10px;
+}
+.NameCoupon {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #121212;
+    color: white;
+    font-family: sans-serif;
+  }
+  
+  .coupon-name {
+    background-color: #605E9F;
+    border-radius: 15px;
+    padding: 20px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .coupon-name h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .section {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 15px;
+    width: 37.5%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .section h2 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .section div {
+    margin-bottom: 15px;
+  }
+  
+  .section span {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .section p {
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  @media (max-width : 700px) {
+    .NameCoupon {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .coupon-name {
+        width: 100%;
+    }
+    .section {
+        width: 100%;
+    }
+    .NameCoupon1 .btns {
+        flex-wrap: wrap;
+    }
+  }

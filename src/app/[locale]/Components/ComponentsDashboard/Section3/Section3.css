@@ -1,0 +1,25 @@
+.Section3 {
+
+    padding: 20px;
+    border-radius: 10px;
+}
+.box-section1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.box-section2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.box-section2 .BoxDashboard {
+    width: 350px;
+}
+@media (max-width : 800px) {
+    .box-section1 {
+        justify-content: center;
+    }
+}

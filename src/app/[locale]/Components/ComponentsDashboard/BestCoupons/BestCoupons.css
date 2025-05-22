@@ -1,0 +1,37 @@
+.BestCoupons  {
+    width: 50%;
+   background-color: #2a2b2d;
+   padding: 10px;
+   border-radius: 20px;
+   text-align: center;
+}
+.BestCoupons .box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 10px ;
+}
+.BestCoupons .box p {
+    width: 30%;
+}
+.BestCoupons button {
+margin: 10px;
+}
+ .btn {
+    background-color: #3b3c3e !important;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+@media (max-width : 800px) {
+    .BestCoupons {
+        width: 100%;
+    }
+}
+@media (max-width : 500px) {
+    .btn {
+        font-size: 11px;
+    }
+}

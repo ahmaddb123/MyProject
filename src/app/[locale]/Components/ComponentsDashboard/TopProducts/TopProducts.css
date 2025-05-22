@@ -1,0 +1,14 @@
+.TopProducts-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.TopProducts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.TopProducts .BoxDashboard {
+    width: 350px;
+}
