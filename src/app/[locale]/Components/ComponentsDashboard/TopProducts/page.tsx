@@ -1,6 +1,6 @@
 "use client";
 
-import ChartCircle2 from "../ChartCircle2/page";
+import ChartCircle2 from "../ChartCircle2/ChartCircle2";
 import { useTranslations } from "use-intl";
 import "./TopProducts.css";
 import { IoIosCube } from "react-icons/io";
