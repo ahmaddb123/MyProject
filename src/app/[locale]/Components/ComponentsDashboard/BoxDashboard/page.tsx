@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react";
+
 import { BsFillPeopleFill } from "react-icons/bs";
 import { FaChartLine } from "react-icons/fa";
 import { FaClockRotateLeft } from "react-icons/fa6";
@@ -7,11 +7,11 @@ import { IoIosCube } from "react-icons/io";
 import "./BoxDashboard.css";
 import { useTranslations } from "next-intl";
 import Explain from "../../Explain/page";
-import { fetchWithAuth } from "../../axios/page";
+
 
 function BoxDashboard() {
   const t = useTranslations("HomePage");
-  const [data, setData] = useState({});
+
 
   return (
     <div className="boxs">

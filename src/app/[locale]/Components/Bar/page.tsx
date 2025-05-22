@@ -12,7 +12,7 @@ import "./Bar.css"
 import { useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
 
-function Bar({ active, setActive, setSection, section }) {
+function Bar({ active, setActive, setSection }) {
     const locale = useLocale();
   const router = useRouter();
 

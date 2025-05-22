@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import "./CustomerList.css";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
 function CustomerList() {
-  const [data, setData] = useState({});
+
 
   return (
     <div className="CustomerList">

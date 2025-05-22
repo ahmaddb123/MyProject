@@ -1,11 +1,10 @@
 "use client";
-import React, { useEffect, useState, useMemo } from "react";
+
 import ChartCircle2 from "../ChartCircle2/page";
 import { useTranslations } from "use-intl";
 import "./TopProducts.css";
 import { IoIosCube } from "react-icons/io";
 import { IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io";
-import { fetchWithAuth } from "../../axios/page";
 
 function SortBy({ field, active, asc, onClick }) {
   return (
@@ -28,39 +27,6 @@ function SortBy({ field, active, asc, onClick }) {
 
 function TopProducts() {
   const t = useTranslations("HomePage");
-  const [TopProducts, setTopProducts] = useState({});
-  const [sortField, setSortField] = useState(null);
-  const [sortAsc, setSortAsc] = useState(true);
-
-  const sortedProducts = useMemo(() => {
-    if (!TopProducts.top_products) return [];
-    const products = [...TopProducts.top_products];
-
-    if (!sortField) return products;
-
-    return products.sort((a, b) => {
-      let aVal = a[sortField];
-      let bVal = b[sortField];
-
-      if (sortField === "price" || sortField === "orders") {
-        aVal = parseFloat(String(aVal).replace(/[^\d.-]/g, ""));
-        bVal = parseFloat(String(bVal).replace(/[^\d.-]/g, ""));
-      }
-
-      if (aVal < bVal) return sortAsc ? -1 : 1;
-      if (aVal > bVal) return sortAsc ? 1 : -1;
-      return 0;
-    });
-  }, [TopProducts, sortField, sortAsc]);
-
-  const handleSort = (field) => {
-    if (sortField === field) {
-      setSortAsc(!sortAsc);
-    } else {
-      setSortField(field);
-      setSortAsc(true);
-    }
-  };
 
   return (
     <div className="TopProducts">
@@ -82,21 +48,11 @@ function TopProducts() {
               <th>{t("Code")}</th>
               <th>
                 {t("Price")}{" "}
-                <SortBy
-                  field="price"
-                  active={sortField === "price"}
-                  asc={sortAsc}
-                  onClick={handleSort}
-                />
+
               </th>
               <th>
                 {t("Orders")}{" "}
-                <SortBy
-                  field="orders"
-                  active={sortField === "orders"}
-                  asc={sortAsc}
-                  onClick={handleSort}
-                />
+
               </th>
               <th>{t("Percentage")}</th>
             </tr>

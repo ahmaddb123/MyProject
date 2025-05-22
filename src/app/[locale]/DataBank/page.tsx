@@ -1,6 +1,5 @@
 import React from 'react'
 import "./DataBank.css"
-import Filter from '../Components/Filter/page'
 import TableDataBank from '../Components/ComponentsDataBank/TableDataBank/page'
 
 function DataBank() {

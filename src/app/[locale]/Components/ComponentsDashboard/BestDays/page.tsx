@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -12,9 +12,7 @@ import {
 } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { useTranslations } from "use-intl";
-import axiosInstance from "../../axios/page";
 
-// تسجيل المكونات
 ChartJS.register(
   BarElement,
   CategoryScale,
@@ -25,33 +23,20 @@ ChartJS.register(
   Title
 );
 
+// ✅ النوع الصحيح للبيانات
+
 const BarChart = () => {
   const t = useTranslations("HomePage");
-  const [BestDays, setBestDays] = useState<any>(null);
-  const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await axiosInstance.get("dashboard/best-days/");
-        setBestDays(response.data);
-        console.log("📊 البيانات المستلمة:", response.data);
-      } catch (err: any) {
-        setError(err.message || "حدث خطأ");
-        console.warn("خطأ جلب البيانات:", err);
-      }
-    };
-
-    getData();
-  }, []);
-  console.log(BestDays);
+  const labels = [1, 2, 3, 4, 5, 6, 7];
+  const values = [10, 20, 30, 40, 50, 60, 70];
 
   const Data = {
-    labels: BestDays?.best_days?.labels?.map((item: any) => item) || [],
+    labels,
     datasets: [
       {
         label: "المبيعات",
-        data: BestDays?.best_days?.values?.map((item: any) => item) || [],
+        data: values,
         backgroundColor: "#7987FF",
         borderColor: "#7987FF",
         borderWidth: 1,
@@ -80,7 +65,7 @@ const BarChart = () => {
         font: {
           weight: "bold",
         },
-        formatter: (value: any, context: any) => {
+        formatter: (value: number, context: { dataIndex: number }) => {
           return `${context.chart.data.labels[context.dataIndex]}: ${value}`;
         },
       },
@@ -92,16 +77,11 @@ const BarChart = () => {
     },
   };
 
-  if (error) return <p style={{ color: "red" }}>خطأ: {error}</p>;
-  if (!BestDays) return null;
-
   return (
     <div className="BarChart1">
-      {BestDays.best_days && (
-        <div className="Bar" style={{ height: "400px" }}>
-          <Bar data={Data} options={options} />
-        </div>
-      )}
+      <div className="Bar" style={{ height: "400px" }}>
+        <Bar data={Data} options={options} />
+      </div>
     </div>
   );
 };

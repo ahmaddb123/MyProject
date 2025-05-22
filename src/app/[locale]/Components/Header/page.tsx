@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation"; // ✅ مهم
 import { usePathname } from "next/navigation"; // ✅ مهم
 
 
-function Header({ active, setActive, setSection }) {
+function Header({  setActive, setSection }) {
   const t = useTranslations("HomePage");
   const locale = useLocale();
   const router = useRouter();

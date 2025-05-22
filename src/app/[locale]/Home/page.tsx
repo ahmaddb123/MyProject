@@ -17,16 +17,15 @@ import Retarget from "../Retarget/page";
 import Settings from "../Settings/page";
 
 function Home() {
-  const [active , setActive] = useState(false)
-  const [section , setSection] = useState("Dashboard")
+  const [active, setActive] = useState(false);
+  const [section, setSection] = useState("Dashboard");
 
-  
   return (
     <div className="home">
-      <Bar  active={active} setActive={setActive} setSection={setSection} setSection={setSection}/>
+      <Bar active={active} setActive={setActive} setSection={setSection} />
       <div className="container">
-        <Header active={active} setActive={setActive} setSection={setSection}/>
-        {section === "Dashboard" && <Dashboard/>}
+        <Header active={active} setActive={setActive} setSection={setSection} />
+        {section === "Dashboard" && <Dashboard />}
         {section === "Order Analysis" && <OrderAnalysis />}
         {section === "Product" && <Product />}
         {section === "Customers" && <Customers />}
