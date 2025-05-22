@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./TableCoupons.css";
 import { FiEdit } from "react-icons/fi";
 import { BsBoxArrowUpRight } from "react-icons/bs";
@@ -10,9 +10,9 @@ import NameCoupon from "../NameCoupon/page";
 import TableDetails from "../Table Details/page";
 
 function TableCoupons() {
-  const [selectedCoupon, setSelectedCoupon] = useState(null);
+  const selectedCoupon = useState(null);
   const [coupons, setCoupons] = useState(4);
-  const [data, setData] = useState([]);
+
 
   return (
     <div className="TableCoupons">

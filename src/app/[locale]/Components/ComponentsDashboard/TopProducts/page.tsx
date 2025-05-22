@@ -4,26 +4,6 @@ import ChartCircle2 from "../ChartCircle2/page";
 import { useTranslations } from "use-intl";
 import "./TopProducts.css";
 import { IoIosCube } from "react-icons/io";
-import { IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io";
-
-function SortBy({ field, active, asc, onClick }) {
-  return (
-    <button
-      onClick={() => onClick(field)}
-      style={{ background: "none", border: "none", cursor: "pointer" }}
-    >
-      {active ? (
-        asc ? (
-          <IoIosArrowDropup />
-        ) : (
-          <IoIosArrowDropdown />
-        )
-      ) : (
-        <IoIosArrowDropdown />
-      )}
-    </button>
-  );
-}
 
 function TopProducts() {
   const t = useTranslations("HomePage");
@@ -46,14 +26,8 @@ function TopProducts() {
               <th>{t("Image")}</th>
               <th>{t("ProductName")}</th>
               <th>{t("Code")}</th>
-              <th>
-                {t("Price")}{" "}
-
-              </th>
-              <th>
-                {t("Orders")}{" "}
-
-              </th>
+              <th>{t("Price")} </th>
+              <th>{t("Orders")} </th>
               <th>{t("Percentage")}</th>
             </tr>
           </thead>
