@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import "./TableDetails.css";
 import { IoIosArrowDropleft } from "react-icons/io";

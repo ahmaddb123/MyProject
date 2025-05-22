@@ -1,4 +1,4 @@
-"use clint";
+"use client"
 import React, { useEffect, useState } from "react";
 import "./TableCoupons.css";
 import { FiEdit } from "react-icons/fi";
