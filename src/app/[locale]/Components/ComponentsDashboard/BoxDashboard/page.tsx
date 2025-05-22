@@ -6,7 +6,7 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 import { IoIosCube } from "react-icons/io";
 import "./BoxDashboard.css";
 import { useTranslations } from "next-intl";
-import Explain from "../../Explain/page";
+import Explain from "../../Explain/Explain";
 
 
 function BoxDashboard() {
