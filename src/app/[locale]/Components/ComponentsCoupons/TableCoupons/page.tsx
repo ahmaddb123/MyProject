@@ -4,7 +4,7 @@ import "./TableCoupons.css";
 import { FiEdit } from "react-icons/fi";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { IoIosArrowDropright } from "react-icons/io";
-import CouponsPercentage from "../Coupons Percentage/page";
+import CouponsPercentage from "../Coupons Percentage/CouponsPercentage";
 import { MdOutlinePercent } from "react-icons/md";
 import NameCoupon from "../NameCoupon/page";
 import TableDetails from "../Table Details/page";
