@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslations } from "use-intl";
-import ChartCircle from "../ChartCircle/page";
+import ChartCircle from "../ChartCircle/ChartCircle";
 import "./returnedCustomer.css";
 
 function ReturnedCustomer() {
