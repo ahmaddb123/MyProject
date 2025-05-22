@@ -4,7 +4,7 @@ import "./TableSettings.css";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { FiEdit } from "react-icons/fi";
 import { FaTrashAlt } from "react-icons/fa";
-import AddSettings from "../Add Settings/page";
+import AddSettings from "../Add Settings/AddSettings";
 
 function TableSettings() {
   const [Add, setAdd] = useState(false)
