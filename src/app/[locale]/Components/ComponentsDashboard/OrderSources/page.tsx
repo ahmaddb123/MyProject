@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from "react";
 import { SlScreenDesktop } from "react-icons/sl";
 import { useTranslations } from "use-intl";

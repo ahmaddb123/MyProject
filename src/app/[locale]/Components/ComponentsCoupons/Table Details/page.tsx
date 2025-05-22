@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import "./TableDetails.css";
 import { IoIosArrowDropleft } from "react-icons/io";
@@ -8,7 +8,7 @@ import { FiEdit } from "react-icons/fi";
 import OrdersCoupons from "../Orders/page";
 import CustomersCoupons from "../Customers/page";
 
-function TableDetails({ setCoupons , coupon }) {
+function TableDetails({ setCoupons, coupon }) {
   const [showTable, setShowTable] = useState("Orders");
   return (
     <div className="TableDetails">

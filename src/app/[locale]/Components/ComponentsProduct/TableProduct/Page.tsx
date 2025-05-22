@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import "./TableProduct.css";
 import { BsLayoutThreeColumns } from "react-icons/bs";
