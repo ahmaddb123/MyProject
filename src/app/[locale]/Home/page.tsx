@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./Home.css";
 import Header from "../Components/Header/page";
-import Bar from "../Components/Bar/page";
+import Bar from "../Components/Bar/Bar";
 import Dashboard from "../Dashboard/page";
 import OrderAnalysis from "../Order Analysis/page";
 import Product from "../Product/page";
