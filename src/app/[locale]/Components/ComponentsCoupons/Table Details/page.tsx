@@ -8,8 +8,25 @@ import { FiEdit } from "react-icons/fi";
 import OrdersCoupons from "../Orders/page";
 import CustomersCoupons from "../Customers/page";
 
-function TableDetails({ setCoupons, coupon }) {
-  const [showTable, setShowTable] = useState("Orders");
+// تعريف نوع البيانات للكوبون
+type Coupon = {
+  name: string;
+  code: string;
+  total_use: number;
+  total_sales: number;
+  net_sales: number;
+  discount_type: string;
+};
+
+// تحديد نوع الخصائص (Props)
+type Props = {
+  setCoupons: (step: number) => void;
+  coupon: Coupon;
+};
+
+function TableDetails({ setCoupons, coupon }: Props) {
+  const [showTable, setShowTable] = useState<"Orders" | "Customers">("Orders");
+
   return (
     <div className="TableDetails">
       <div className="table-wrapper">
@@ -52,21 +69,23 @@ function TableDetails({ setCoupons, coupon }) {
             </tr>
           </tbody>
         </table>
+
         <div className="btns">
           <button
-            className={showTable == "Customers" ? "active" : ""}
+            className={showTable === "Customers" ? "active" : ""}
             onClick={() => setShowTable("Customers")}
           >
             Customers
           </button>
           <button
-            className={showTable == "Orders" ? "active" : ""}
+            className={showTable === "Orders" ? "active" : ""}
             onClick={() => setShowTable("Orders")}
           >
             Orders
           </button>
         </div>
-        {showTable == "Orders" ? <OrdersCoupons /> : <CustomersCoupons />}
+
+        {showTable === "Orders" ? <OrdersCoupons /> : <CustomersCoupons />}
       </div>
     </div>
   );
