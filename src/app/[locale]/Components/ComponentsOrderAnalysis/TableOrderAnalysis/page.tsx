@@ -1,12 +1,40 @@
-"use client"
+"use client";
 import React, { useState, useRef } from "react";
 import "./TableOrder.css";
 
-const TableOrder = () => {
-  const [openId, setOpenId] = useState(null);
-  const contentRefs = useRef({});
+interface OrderItem {
+  product: string;
+  price: string;
+  qty: string;
+  disc: string;
+  total: string;
+}
 
-  const data = [
+interface Summary {
+  subtotal: string;
+  shipping: string;
+  discount: string;
+  total: string;
+}
+
+interface Order {
+  id: string;
+  name: string;
+  address: string;
+  date: string;
+  method: string;
+  total: string;
+  actionTime: string;
+  status: string;
+  orders: OrderItem[];
+  summary: Summary;
+}
+
+const TableOrder = () => {
+  const [openId, setOpenId] = useState<string | null>(null);
+  const contentRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+  const data: Order[] = [
     {
       id: "00001",
       name: "Hussam Zina",
@@ -48,8 +76,8 @@ const TableOrder = () => {
     },
   ];
 
-  const toggleOpen = (id) => {
-    setOpenId(openId === id ? null : id);
+  const toggleOpen = (id: string) => {
+    setOpenId((prev) => (prev === id ? null : id));
   };
 
   return (
@@ -86,9 +114,11 @@ const TableOrder = () => {
                 </tr>
 
                 <tr>
-                  <td colSpan="8" className="accordion-wrapper">
+                  <td colSpan={8} className="accordion-wrapper">
                     <div
-                      ref={(el) => (contentRefs.current[order.id] = el)}
+                      ref={(el) => {
+                        contentRefs.current[order.id] = el;
+                      }}
                       className={`accordion-content ${openId === order.id ? "open" : ""}`}
                     >
                       {openId === order.id && (
@@ -121,15 +151,15 @@ const TableOrder = () => {
                               </tr>
                             ))}
                             <tr className="summary">
-                              <td colSpan="3"></td>
-                              <td colSpan="3" className="summary-values">
+                              <td colSpan={3}></td>
+                              <td colSpan={3} className="summary-values">
                                 <div>Subtotal <span>{order.summary.subtotal}</span></div>
                                 <div>Shipping <span>{order.summary.shipping}</span></div>
                                 <div className="discount">Discount <span>{order.summary.discount}</span></div>
                                 <div className="discount">Tax <span>{order.summary.discount}</span></div>
                                 <div className="total">Total <span>{order.summary.total}</span></div>
                               </td>
-                              <td colSpan="3"></td>
+                              <td colSpan={3}></td>
                             </tr>
                           </tbody>
                         </table>

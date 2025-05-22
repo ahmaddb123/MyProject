@@ -10,12 +10,11 @@ import {
   Legend,
   Title,
 } from "chart.js";
-import ChartDataLabels from "chartjs-plugin-datalabels";
+import ChartDataLabels, { Context } from "chartjs-plugin-datalabels";
 import { useTranslations } from "use-intl";
 
 import "./mostActiveCum.css";
 
-// تسجيل المكونات الضرورية
 ChartJS.register(
   BarElement,
   CategoryScale,
@@ -44,9 +43,9 @@ const BarChart2 = () => {
 
   const options = {
     responsive: true,
-    maintainAspectRatio: false, // تعطيل النسبة التلقائية للسماح بتعديل الحجم
+    maintainAspectRatio: false,
     plugins: {
-      legend: { display: false }, // إخفاء عنوان البيانات الجانبي
+      legend: { display: false },
       tooltip: { enabled: true },
       title: {
         display: true,
@@ -57,14 +56,12 @@ const BarChart2 = () => {
         color: "#ffffff",
       },
       datalabels: {
-        anchor: "end",
-        align: "top",
-        color: "#ffffff", // تغيير لون الأرقام إلى الأحمر
+        color: "#ffffff",
         font: {
-          weight: "bold",
+          weight: 700,
         },
-        formatter: (value, context) => {
-          return `${context.chart.data.labels[context.dataIndex]}: ${value}`; // عرض اسم القسم مع الرقم
+        formatter: (value: number, context: Context) => {
+          return `${context.chart.data.labels![context.dataIndex]}: ${value}`;
         },
       },
     },

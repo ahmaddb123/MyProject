@@ -16,6 +16,7 @@ function TopProducts() {
         <ChartCircle2
           percentages={[35, 50, 15]}
           labels={["content", "content", "content"]}
+          descriptions={["desc1", "desc2", "desc3"]}
         />
       </div>
 

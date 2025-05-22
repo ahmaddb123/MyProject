@@ -11,10 +11,8 @@ import {
   Legend,
   Title,
 } from "chart.js";
-import ChartDataLabels from "chartjs-plugin-datalabels";
+import ChartDataLabels, { Context } from "chartjs-plugin-datalabels";
 
-
-// تسجيل المكونات الضرورية
 ChartJS.register(
   BarElement,
   CategoryScale,
@@ -26,10 +24,19 @@ ChartJS.register(
 );
 
 const BarChartProducts = () => {
-
-
   const data = {
-    labels: ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يناير", "فبراير", "مارس", "أبريل", "مايو"],
+    labels: [
+      "يناير",
+      "فبراير",
+      "مارس",
+      "أبريل",
+      "مايو",
+      "يونيو",
+      "يوليو",
+      "أغسطس",
+      "سبتمبر",
+      "أكتوبر",
+    ],
     datasets: [
       {
         label: "المبيعات",
@@ -56,14 +63,14 @@ const BarChartProducts = () => {
         color: "#ffffff",
       },
       datalabels: {
-        anchor: "end",
-        align: "top",
+        anchor: "end" as const,
+        align: "end" as const,
         color: "#ffffff",
         font: {
-          weight: "bold",
+          weight: 700,
         },
-        formatter: (value, context) => {
-          return `${context.chart.data.labels[context.dataIndex]}: ${value}`;
+        formatter: (value: number, context: Context) => {
+          return `${context.chart.data.labels?.[context.dataIndex]}: ${value}`;
         },
       },
     },
@@ -71,8 +78,16 @@ const BarChartProducts = () => {
       y: {
         beginAtZero: true,
         ticks: {
-          stepSize: 10, // الزيادة كل 20
-          color: "#ffffff", // لون الأرقام
+          stepSize: 10,
+          color: "#ffffff",
+          font: {
+            size: 14,
+          },
+        },
+      },
+      x: {
+        ticks: {
+          color: "#ffffff",
           font: {
             size: 14,
           },

@@ -3,9 +3,13 @@
 import "./ForgetPassword.css";
 import Link from "next/link";
 import { useLocale } from "next-intl";
+import { useState } from "react";
 
 function ForgetPassword() {
+  const [Email , setEmail] = useState("")
   const locale = useLocale();
+  console.log(Email);
+  
   return (
     <div className="ForgetPassword">
       <div className="container">

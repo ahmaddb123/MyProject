@@ -1,18 +1,14 @@
 import React from "react";
 import "./CouponsPercentage.css";
 
-type Coupon = {
-  name: string;
-  code: string;
-};
+
 
 type Props = {
   setCoupons: (value: number) => void;
-  coupon: Coupon;
 };
 
 
-function CouponsPercentage({ setCoupons, coupon }: Props) {
+function CouponsPercentage({ setCoupons }: Props) {
   return (
     <div className="CouponsPercentage">
       <h1>Coupons Percentage</h1>
@@ -21,7 +17,7 @@ function CouponsPercentage({ setCoupons, coupon }: Props) {
           <div className="container-input">
             <div>
               <label htmlFor="">Name</label>
-              <input type="text" placeholder="Name" value={coupon.name} readOnly />
+              <input type="text" placeholder="Name"  readOnly />
             </div>
             <div>
               <label htmlFor="">account name</label>
@@ -35,7 +31,7 @@ function CouponsPercentage({ setCoupons, coupon }: Props) {
           <div className="container-input">
             <div>
               <label htmlFor="">Code</label>
-              <input type="text" placeholder="NK4" value={coupon.code} readOnly/>
+              <input type="text" placeholder="NK4"  readOnly/>
             </div>
             <div>
               <label htmlFor="">IBAN number</label>

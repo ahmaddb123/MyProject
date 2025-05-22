@@ -1,7 +1,12 @@
 import React from "react";
 import { IoIosArrowDropdown, IoIosArrowDropup } from "react-icons/io";
 
-function SortBy({ sortAsc, onToggle }) {
+type SortByProps = {
+  sortAsc: boolean;
+  onToggle: () => void;
+};
+
+function SortBy({ sortAsc, onToggle }: SortByProps) {
   return (
     <button onClick={onToggle}>
       {sortAsc ? <IoIosArrowDropup /> : <IoIosArrowDropdown />}

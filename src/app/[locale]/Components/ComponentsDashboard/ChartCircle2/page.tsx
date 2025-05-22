@@ -1,9 +1,10 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, TooltipItem } from "chart.js"; // استورد TooltipItem
 import "./ChartCircle2.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
+
 interface ChartCircle2Props {
   percentages: number[];
   labels: string[];
@@ -40,7 +41,7 @@ const ChartCircle2 = ({
       },
       tooltip: {
         callbacks: {
-          label: function (context) {
+          label: function (context: TooltipItem<"doughnut">) {  // هنا النوع
             let label = context.label || "";
             if (label) {
               label += ": ";
@@ -50,7 +51,7 @@ const ChartCircle2 = ({
             }
             return label;
           },
-          afterLabel: function (context) {
+          afterLabel: function (context: TooltipItem<"doughnut">) { // هنا النوع
             return descriptions[context.dataIndex];
           },
         },
@@ -90,23 +91,4 @@ const ChartCircle2 = ({
   );
 };
 
-// مثال على استخدام المكون
-const ExampleChartCircle2 = () => {
-  const percentages = [30, 40, 30];
-  const labels = ["المبيعات", "التسويق", "التطوير"];
-  const descriptions = [
-    "إجمالي المبيعات في هذا الربع",
-    "تكاليف التسويق لهذا الشهر",
-    "تطورات المنتج الأخيرة",
-  ];
-
-  return (
-    <ChartCircle2
-      percentages={percentages}
-      labels={labels}
-      descriptions={descriptions}
-    />
-  );
-};
-
-export default ExampleChartCircle2;
+export default ChartCircle2;

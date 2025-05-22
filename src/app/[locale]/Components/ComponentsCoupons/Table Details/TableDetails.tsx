@@ -8,23 +8,12 @@ import { FiEdit } from "react-icons/fi";
 import OrdersCoupons from "../Orders/page";
 import CustomersCoupons from "../Customers/page";
 
-// تعريف نوع البيانات للكوبون
-type Coupon = {
-  name: string;
-  code: string;
-  total_use: number;
-  total_sales: number;
-  net_sales: number;
-  discount_type: string;
-};
-
 // تحديد نوع الخصائص (Props)
 type Props = {
   setCoupons: (step: number) => void;
-  coupon: Coupon;
 };
 
-function TableDetails({ setCoupons, coupon }: Props) {
+function TableDetails({ setCoupons }: Props) {
   const [showTable, setShowTable] = useState<"Orders" | "Customers">("Orders");
 
   return (
@@ -44,12 +33,12 @@ function TableDetails({ setCoupons, coupon }: Props) {
           </thead>
           <tbody>
             <tr>
-              <td>{coupon.name}</td>
-              <td>{coupon.code}</td>
-              <td>{coupon.total_use}</td>
-              <td>{coupon.total_sales}</td>
-              <td>{coupon.net_sales}</td>
-              <td>{coupon.discount_type}</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
               <td className="tdBtn">
                 <div className="devBtn">
                   <button>

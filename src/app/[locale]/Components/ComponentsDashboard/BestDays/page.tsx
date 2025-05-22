@@ -11,6 +11,7 @@ import {
   Title,
 } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import { Context as ChartJSDataLabelsContext } from "chartjs-plugin-datalabels";
 import { useTranslations } from "use-intl";
 
 ChartJS.register(
@@ -22,8 +23,6 @@ ChartJS.register(
   ChartDataLabels,
   Title
 );
-
-// ✅ النوع الصحيح للبيانات
 
 const BarChart = () => {
   const t = useTranslations("HomePage");
@@ -59,14 +58,12 @@ const BarChart = () => {
         color: "#ffffff",
       },
       datalabels: {
-        anchor: "end",
-        align: "top",
         color: "#ffffff",
         font: {
-          weight: "bold",
+          weight: "bold" as const,
         },
-        formatter: (value: number, context: { dataIndex: number }) => {
-          return `${context.chart.data.labels[context.dataIndex]}: ${value}`;
+        formatter: (value: number, context: ChartJSDataLabelsContext) => {
+          return `${context.chart.data.labels?.[context.dataIndex]}: ${value}`;
         },
       },
     },

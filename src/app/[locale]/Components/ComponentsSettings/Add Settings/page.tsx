@@ -2,14 +2,18 @@
 import React, { useState } from "react";
 import "./AddSettings.css";
 
-function AddSettings({ setAdd }) {
+type AddSettingsProps = {
+  setAdd: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+function AddSettings({ setAdd }: AddSettingsProps) {
   const [active, setActive] = useState(false);
   return (
     <div className="AddSettings">
       <div className="h1">
-        <h1>Add New Admin</h1>{" "}
+        <h1>Add New Admin</h1>
         <button
-          className={active == true ? "active" : ""}
+          className={active ? "active" : ""}
           onClick={() => setActive((prev) => !prev)}
         >
           Can Edit

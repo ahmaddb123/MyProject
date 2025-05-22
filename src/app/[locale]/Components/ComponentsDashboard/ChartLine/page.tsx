@@ -9,10 +9,11 @@ import {
   Tooltip,
   Legend,
   Filler,
+  TooltipItem, // استيراد النوع
 } from "chart.js";
 import { useTranslations } from "next-intl";
 import { Dropdown, DropdownButton } from "react-bootstrap";
-import "./ChartLine.css"
+import "./ChartLine.css";
 
 ChartJS.register(
   CategoryScale,
@@ -22,8 +23,9 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  Filler 
+  Filler
 );
+
 const data = {
   labels: [
     "يناير",
@@ -31,26 +33,26 @@ const data = {
     "مارس",
     "أبريل",
     "مايو",
-    "يونيو", 
+    "يونيو",
     "يوليو",
-    "أغسطس", 
+    "أغسطس",
     "سبتمبر",
     "أكتوبر",
-    "نوفمبر", 
-    "ديسمبر", 
+    "نوفمبر",
+    "ديسمبر",
   ],
   datasets: [
     {
       label: "Sales Details",
-      data: [65, 59, 80, 81, 56, 65, 59, 80, 81, 56,22,70],
+      data: [65, 59, 80, 81, 56, 65, 59, 80, 81, 56, 22, 70],
       borderColor: "white",
-      backgroundColor: "#4379EE29", // لون التدرج (أزرق مع شفافية)
+      backgroundColor: "#4379EE29",
       fill: true,
-      tension: 0.2, // للتحكم في التوتر للخط (لجعل الخط منحني أكثر أو أكثر استقامة)
+      tension: 0.2,
       borderWidth: 3,
-      pointBackgroundColor: "#ccc", // لون النقاط (المربعات)
-      pointBorderColor: "#ccc", // لون حدود النقاط
-      pointRadius: 6, // حجم النقاط (يمكنك زيادة أو تقليل القيمة هنا)
+      pointBackgroundColor: "#ccc",
+      pointBorderColor: "#ccc",
+      pointRadius: 6,
       pointBorderWidth: 2,
     },
   ],
@@ -66,19 +68,19 @@ const options = {
     },
     y: {
       grid: {
-        color: "rgba(200, 200, 200, 0.2)", // تغيير لون المربعات في المحور الرأسي
-        borderColor: "rgba(255, 99, 132, 0.2)", // تغيير لون الحدود للمربعات
-        borderWidth: 1, // تعديل سمك حدود المربعات
+        color: "rgba(200, 200, 200, 0.2)",
+        borderColor: "rgba(255, 99, 132, 0.2)",
+        borderWidth: 1,
       },
     },
   },
   plugins: {
     legend: {
-      position: "top",
+      position: "top" as const, // تحديد النوع بصيغة ثابتة "as const"
     },
     tooltip: {
       callbacks: {
-        label: function (context) {
+        label: function (context: TooltipItem<"line">) {  // تحديد النوع
           return context.dataset.label + ": " + context.raw;
         },
       },

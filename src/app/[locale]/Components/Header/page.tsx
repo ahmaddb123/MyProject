@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { IoLanguage, IoSettingsOutline } from "react-icons/io5";
 import { LuBellDot } from "react-icons/lu";
@@ -6,21 +6,25 @@ import "./Header.css";
 import { FaBars } from "react-icons/fa";
 import { VscFilter } from "react-icons/vsc";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next/navigation"; // ✅ مهم
-import { usePathname } from "next/navigation"; // ✅ مهم
+import { useRouter, usePathname } from "next/navigation";
 
+type HeaderProps = {
+  setActive: React.Dispatch<React.SetStateAction<boolean>>;
+  setSection: React.Dispatch<React.SetStateAction<string>>;
+};
 
-function Header({  setActive, setSection }) {
+function Header({ setActive, setSection }: HeaderProps) {
   const t = useTranslations("HomePage");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
 
-const toggleLanguage = () => {
-  const newLocale = locale === "en" ? "ar" : "en";
-  const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
-  router.push(newPathname);
-};
+  const toggleLanguage = () => {
+    const newLocale = locale === "en" ? "ar" : "en";
+    const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
+    router.push(newPathname);
+  };
+
   return (
     <div className="Header">
       <FaBars className="bars" onClick={() => setActive((prev) => !prev)} />
@@ -42,7 +46,7 @@ const toggleLanguage = () => {
           onClick={() => setSection("Settings")}
         />
         <LuBellDot style={{ color: "#FE5C73" }} />
-        <IoLanguage  style={{ cursor: "pointer" }} onClick={toggleLanguage} />
+        <IoLanguage style={{ cursor: "pointer" }} onClick={toggleLanguage} />
       </div>
       <div className="full-name">
         <h1>Full Name</h1>

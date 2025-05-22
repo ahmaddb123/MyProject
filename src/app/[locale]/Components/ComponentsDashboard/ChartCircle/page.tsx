@@ -4,8 +4,10 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import "./returnedCustomer.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
-
-const ChartCircle = ({ percentage }) => { // استقبال prop باسم percentage
+type ChartCircleProps = {
+  percentage: number;  // هنا نوع الـ prop رقم
+}; 
+const ChartCircle: React.FC<ChartCircleProps> = ({ percentage }) =>{ // استقبال prop باسم percentage
   const data = {
     datasets: [
       {

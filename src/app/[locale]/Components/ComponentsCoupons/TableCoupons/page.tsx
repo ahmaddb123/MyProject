@@ -7,21 +7,21 @@ import { IoIosArrowDropright } from "react-icons/io";
 import CouponsPercentage from "../Coupons Percentage/CouponsPercentage";
 import { MdOutlinePercent } from "react-icons/md";
 import NameCoupon from "../NameCoupon/page";
-import TableDetails from "../Table Details/page";
+import TableDetails from "../Table Details/TableDetails";
 
 function TableCoupons() {
-  const selectedCoupon = useState(null);
+
   const [coupons, setCoupons] = useState(4);
 
 
   return (
     <div className="TableCoupons">
       {coupons == 1 ? (
-        <CouponsPercentage setCoupons={setCoupons} coupon={selectedCoupon} />
+        <CouponsPercentage setCoupons={setCoupons}  />
       ) : coupons == 2 ? (
         <NameCoupon />
       ) : coupons == 3 ? (
-        <TableDetails setCoupons={setCoupons} coupon={selectedCoupon} />
+        <TableDetails setCoupons={setCoupons}  />
       ) : (
         <div className="table-wrapper">
           <table>
