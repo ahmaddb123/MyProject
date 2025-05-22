@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./Home.css";
-import Header from "../Components/Header/page";
+import Header from "../Components/Header/Header";
 import Bar from "../Components/Bar/Bar";
 import Dashboard from "../Dashboard/page";
 import OrderAnalysis from "../Order Analysis/page";
