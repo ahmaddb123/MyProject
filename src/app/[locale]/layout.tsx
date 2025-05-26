@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../globals.css"; 
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
