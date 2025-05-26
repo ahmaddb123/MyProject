@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
+import { use } from "react"; // ✅ استخدم React.use
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,17 +14,17 @@ export const metadata: Metadata = {
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: "ar" | "en" }; // هنا params كـ object عادي مش Promise
+  params: { locale: "ar" | "en" };
 };
 
-export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = params; // لا await هنا
+export default function LocaleLayout({ children, params }: Props) {
+  const { locale } = params;
 
   if (!routing.locales.includes(locale)) {
     notFound();
   }
 
-  const messages = await getMessages({ locale });
+  const messages = use(getMessages({ locale })); // ✅ استخدم use بدلاً من await
 
   return (
     <html lang={locale}>
