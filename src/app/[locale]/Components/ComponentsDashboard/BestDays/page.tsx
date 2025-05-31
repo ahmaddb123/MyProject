@@ -12,7 +12,7 @@ import {
 } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Context as ChartJSDataLabelsContext } from "chartjs-plugin-datalabels";
-import { useTranslations } from "use-intl";
+import { useTranslations } from "next-intl";
 
 ChartJS.register(
   BarElement,

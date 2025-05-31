@@ -11,7 +11,7 @@ import {
   Title,
 } from "chart.js";
 import ChartDataLabels, { Context } from "chartjs-plugin-datalabels";
-import { useTranslations } from "use-intl";
+import { useTranslations } from "next-intl";
 
 import "./mostActiveCum.css";
 

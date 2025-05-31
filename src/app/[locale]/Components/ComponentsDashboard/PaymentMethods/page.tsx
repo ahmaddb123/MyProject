@@ -1,7 +1,7 @@
 import React from "react";
 import { FaImage } from "react-icons/fa";
 import "./PaymentMethods.css"
-import { useTranslations } from "use-intl";
+import { useTranslations } from "next-intl";
 
 function PaymentMethods() {
       const t = useTranslations("HomePage");

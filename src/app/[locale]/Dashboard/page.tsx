@@ -3,7 +3,7 @@ import Filter from "../Components/Filter/page";
 import "./Dashboard.css";
 import LineChartComponent from "../Components/ComponentsDashboard/ChartLine/page";
 import RecentOrders from "../Components/ComponentsDashboard/Recent orders/page";
-import { useTranslations } from "use-intl";
+import { useTranslations } from "next-intl";
 import RecentOrders2 from "../Components/ComponentsDashboard/RecentOrders2/page";
 import Section1 from "../Components/ComponentsDashboard/Section1/page";
 import Section2 from "../Components/ComponentsDashboard/Section2/page";

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaClockRotateLeft } from 'react-icons/fa6';
 import { IoIosCube } from 'react-icons/io';
-import { useTranslations } from 'use-intl';
+import { useTranslations } from "next-intl";
 import "./RecentOrders2.css"
 
 function RecentOrders2() {
