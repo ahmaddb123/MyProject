@@ -1,43 +1,44 @@
 import React from "react";
 import { FaImage } from "react-icons/fa";
-import "./ShippingCompanies.css"
+import styles from "./ShippingCompanies.module.css";
 import { useTranslations } from "next-intl";
 
 function ShippingCompanies() {
-      const t = useTranslations("HomePage");
+  const t = useTranslations("HomePage");
+
   return (
-    <div className="ShippingCompanies">
-        <h1>{t("ShippingCompanies")}</h1>
+    <div className={styles.ShippingCompanies}>
+      <h1>{t("ShippingCompanies")}</h1>
       <div>
-        <div className="box">
-          <p className="p">
+        <div className={styles.box}>
+          <p className={styles.p}>
             <FaImage /> Shipping Co.
           </p>
-          <p className="btn">50 Order</p>
-          <p className="btn">50%</p>
+          <p className={styles.btn}>50 Order</p>
+          <p className={styles.btn}>50%</p>
         </div>
-        <div className="box">
-          <p className="p">
+        <div className={styles.box}>
+          <p className={styles.p}>
             <FaImage /> Shipping Co.
           </p>
-          <p className="btn">50 Order</p>
-          <p className="btn">50%</p>
+          <p className={styles.btn}>50 Order</p>
+          <p className={styles.btn}>50%</p>
         </div>
-        <div className="box">
-          <p className="p">
+        <div className={styles.box}>
+          <p className={styles.p}>
             <FaImage />
             Shipping Co.
           </p>
-          <p className="btn">50 Order</p>
-          <p className="btn">50%</p>
+          <p className={styles.btn}>50 Order</p>
+          <p className={styles.btn}>50%</p>
         </div>
-        <div className="box">
-          <p className="p">
+        <div className={styles.box}>
+          <p className={styles.p}>
             <FaImage />
             Shipping Co.
           </p>
-          <p className="btn">50 Order</p>
-          <p className="btn">50%</p>
+          <p className={styles.btn}>50 Order</p>
+          <p className={styles.btn}>50%</p>
         </div>
         <button>Show All</button>
       </div>

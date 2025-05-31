@@ -20,7 +20,7 @@ function Bar({ active, setActive, setSection }: BarProps) {
   const router = useRouter();
 
   const handleLogout = async () => {
-    const refreshToken = localStorage.getItem("refresh");
+    const refreshToken = localStorage.getItem("refreshToken");
 
     if (!refreshToken) {
       console.error("No refresh token found!");
