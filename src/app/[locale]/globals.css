@@ -1,43 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #1E1F21;
+    --foreground: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 html {
   scroll-behavior: smooth;
+  background-color: var(--background);
 }
 body {
   color: var(--foreground);
-  background:#1e1e1e;
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   font-family: "Poppins", serif;
   font-style: normal;
 }
 ::-webkit-scrollbar {
   width: 10px;
-  height: 9px; /* عرض الشريط */
+  height: 9px; 
 }
 
 ::-webkit-scrollbar-track {
-  background: #707070; /* خلفية المسار */
+  background: #707070;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3d3e3f; /* لون المقبض */
+  background: #3d3e3f;
   border-radius: 3px;
   transition: 0.5s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* لما تحط المؤشر عليه */
+  background: #555;
 }
