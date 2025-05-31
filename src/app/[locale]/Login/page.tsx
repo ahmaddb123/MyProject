@@ -12,10 +12,10 @@ export default function Login() {
   const router = useRouter();
 
   const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     try {
-      const response = await fetch("http://46.202.135.90:81/en/api/login/", {
+      const response = await fetch("https://46.202.135.90:81/en/api/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,7 +30,7 @@ export default function Login() {
         localStorage.setItem("accessToken", data.access);
         localStorage.setItem("refreshToken", data.refresh);
         localStorage.setItem("email", data.email);
-        
+
         router.push(`/${locale}/Home`);
       } else {
         console.error("فشل تسجيل الدخول");
