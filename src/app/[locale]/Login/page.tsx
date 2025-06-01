@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./login.module.css"; // ← ملاحظة التعديل هنا
+import styles from "./Login.module.css"; 
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";

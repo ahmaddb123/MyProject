@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from "react";
 import styles from "./ShippingCompanies.module.css";
 import { useTranslations } from "next-intl";
@@ -36,8 +37,8 @@ function ShippingCompanies({ setSection }: ShippingCompaniesProps) {
     <div className={styles.ShippingCompanies}>
       <h1>{t("ShippingCompanies")}</h1>
       <div>
-        {ShippingData.map((item) => (
-          <div key={item.id} className={styles.box}>
+        {ShippingData.map((item, key) => (
+          <div key={key} className={styles.box}>
             <p className={styles.p}>{item.shipping_company_name}</p>
             <p className={styles.btn}>{item.orders_count} Order</p>
             <p className={styles.btn}>{item.usage_percentage}%</p>
