@@ -1,17 +1,28 @@
 import axios from "axios";
+import router from "next/router"; 
 
-// إنشاء نسخة من axios
 const axiosInstance = axios.create({
-  baseURL: "http://46.202.135.90:81/en/api", // عدّل إذا احتجت
+  baseURL: "http://46.202.135.90:81/en/api",
 });
 
-// Interceptor للردود
+// ✅ أضف التوكن تلقائياً في كل طلب
+axiosInstance.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("accessToken");
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+// ✅ التعامل مع التوكن المنتهي وتجديده تلقائياً
 axiosInstance.interceptors.response.use(
   (response) => response,
   async (error) => {
     const originalRequest = error.config;
 
-    // إذا كان الخطأ 401 ولم تتم إعادة المحاولة بعد
     if (error.response?.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
 
@@ -25,26 +36,21 @@ axiosInstance.interceptors.response.use(
 
         const newAccessToken = res.data.access;
 
-        // تحديث التوكن
         localStorage.setItem("accessToken", newAccessToken);
 
-        // تعديل الهيدر بالوصول الجديد
         originalRequest.headers.Authorization = "Bearer " + newAccessToken;
 
-        // إعادة تنفيذ الطلب الأصلي
         return axiosInstance(originalRequest);
       } catch (err) {
-        // فشل التحديث، إحذف التوكنات
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
+         router.push("/login"); 
         return Promise.reject(err);
       }
     }
 
-    // إذا ما كان 401 أو فشل التحديث
     return Promise.reject(error);
   }
 );
 
-// تصدير النسخة
 export default axiosInstance;

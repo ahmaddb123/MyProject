@@ -1,3 +1,4 @@
+import React from "react";
 import BoxDashboard from "../Components/ComponentsDashboard/BoxDashboard/page";
 import Filter from "../Components/Filter/page";
 import "./Dashboard.css";
@@ -10,11 +11,13 @@ import Section2 from "../Components/ComponentsDashboard/Section2/page";
 import Section3 from "../Components/ComponentsDashboard/Section3/page";
 import TopProducts from "../Components/ComponentsDashboard/TopProducts/page";
 
+// ✅ تعريف نوع الـ props
+interface DashboardProps {
+  setSection: React.Dispatch<React.SetStateAction<string>>;
+}
 
-
-function Dashboard() {
+function Dashboard({ setSection }: DashboardProps) {
   const t = useTranslations("HomePage");
-
 
   return (
     <div className="Dashboard">
@@ -27,8 +30,7 @@ function Dashboard() {
       <Section1 />
       <Section2 />
       <TopProducts />
-      <Section3 />
-
+      <Section3 setSection={setSection} />
     </div>
   );
 }

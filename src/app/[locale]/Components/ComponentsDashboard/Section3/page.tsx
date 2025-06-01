@@ -1,18 +1,22 @@
-import React from 'react'
-import ShippingCompanies from '../ShippingCompanies/page'
-import "./Section3.css"
-import PaymentMethods from '../PaymentMethods/page'
+import React from "react";
+import ShippingCompanies from "../ShippingCompanies/page";
+import "./Section3.css";
+import PaymentMethods from "../PaymentMethods/page";
 
-function Section3() {
-  return (
-    <div className='Section3'>
-      <div className="box-section1">
-        <ShippingCompanies/>
-        <PaymentMethods/>
-      </div>
-
-    </div>
-  )
+// ✅ تعريف نوع الـ props
+interface Section3Props {
+  setSection: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default Section3
+function Section3({ setSection }: Section3Props) {
+  return (
+    <div className="Section3">
+      <div className="box-section1">
+        <ShippingCompanies setSection={setSection} />
+        <PaymentMethods />
+      </div>
+    </div>
+  );
+}
+
+export default Section3;

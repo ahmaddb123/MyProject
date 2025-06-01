@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { BsFillPeopleFill } from "react-icons/bs";
 import { FaChartLine } from "react-icons/fa";
@@ -11,6 +11,7 @@ import Explain from "../../Explain/Explain";
 
 function BoxDashboard() {
   const t = useTranslations("HomePage");
+
 
 
   return (

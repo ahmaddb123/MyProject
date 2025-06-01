@@ -25,7 +25,7 @@ function Home() {
       <Bar active={active} setActive={setActive} setSection={setSection} />
       <div className="container">
         <Header setActive={setActive} setSection={setSection} />
-        {section === "Dashboard" && <Dashboard />}
+        {section === "Dashboard" && <Dashboard setSection={setSection} />}
         {section === "Order Analysis" && <OrderAnalysis />}
         {section === "Product" && <Product />}
         {section === "Customers" && <Customers />}

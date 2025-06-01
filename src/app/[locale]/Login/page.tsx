@@ -66,6 +66,7 @@ export default function Login() {
               />
             </div>
             <Link href={`/${locale}/ForgetPassword`}>Forgot Password</Link>
+            <Link href={`/${locale}/Home/`}>home</Link>
             <div className={styles.btn}>
               <button type="submit" className={styles.button}>
                 Sign in
