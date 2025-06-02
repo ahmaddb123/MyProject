@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import RecentOrders2 from "../Components/ComponentsDashboard/RecentOrders2/page";
 import Section1 from "../Components/ComponentsDashboard/Section1/page";
 import Section2 from "../Components/ComponentsDashboard/Section2/page";
-import Section3 from "../Components/ComponentsDashboard/Section3/page";
+import Section3 from "../Components/ComponentsDashboard/Section3/Section3";
 import TopProducts from "../Components/ComponentsDashboard/TopProducts/page";
 
 // ✅ تعريف نوع الـ props

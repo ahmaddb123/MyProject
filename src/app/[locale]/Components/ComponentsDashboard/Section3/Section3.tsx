@@ -1,5 +1,5 @@
 import React from "react";
-import ShippingCompanies from "../ShippingCompanies/page";
+import ShippingCompanies from "../ShippingCompanies/ShippingCompanies";
 import "./Section3.css";
 import PaymentMethods from "../PaymentMethods/page";
 
